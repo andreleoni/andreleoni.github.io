@@ -42,7 +42,8 @@ section#my-profile h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0px 10px;
 }
 
 #social-profiles a {
