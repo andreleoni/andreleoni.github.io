@@ -4,6 +4,7 @@
     padding: 5px;
     position: relative;
     width: 100%;
+    max-width: 767px;
     background-color: #4990E2;
     display: inline-block;
   }
