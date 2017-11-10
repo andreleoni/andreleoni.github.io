@@ -100,3 +100,8 @@ p {
   display: block;
   margin: 10px 0px;
 }
+
+ul li {
+  list-style: circle;
+  margin: 5px 0px 5px 30px;
+}
