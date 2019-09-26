@@ -77,10 +77,15 @@
 
           zE('webWidget', 'chat:send', text)
 
-          zE('webWidget:on', 'chat:end', finish)
+          zE('webWidget:on', 'chat:end', finishChat)
 
           zE('webWidget', 'popout')
         })
+      }
+
+      function finishChat() {
+        zE('webWidget', 'chat:end')
+        finish()
       }
     </script>
 
@@ -177,7 +182,7 @@
       <br>
       <br>
 
-      <button onclick="$zopim.livechat.endChat()"> Encerrar chat </button>
+      <button onclick="zE('webWidget', 'chat:end')"> Encerrar chat </button>
     </div>
 
 
