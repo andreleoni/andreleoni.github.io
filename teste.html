@@ -1,5 +1,7 @@
 <!DOCTYPE html>
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Start of enjoei1464882635 Zendesk Widget script -->
@@ -79,7 +81,9 @@
 
           zE('webWidget:on', 'chat:end', finishChat)
 
-          zE('webWidget', 'popout')
+          if ($("#apppopup").val() == "sim") {
+            zE('webWidget', 'popout')
+          }
         })
       }
 
@@ -120,6 +124,8 @@
 
       <br>
       <br>
+
+      abrir chat em popup? <input id="apppopup" type="text" value="sim"> </input>
 
       <button onclick="goStep2()"> Próximo </button>
     </div>
