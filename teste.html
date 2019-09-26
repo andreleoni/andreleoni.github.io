@@ -13,8 +13,6 @@
 
       function init() {
         $("#step-1").addClass("show");
-
-        // $zopim.livechat.button.hide();
       }
 
       function goStep2() {
@@ -56,33 +54,46 @@
       }
 
       function gotochat() {
-        $zopim.livechat.setName($("#currentUserName").val())
-        $zopim.livechat.setEmail($("#currentUserEmail").val())
-
-        $zopim.livechat.say("Preciso de ajuda...")
-        $zopim.livechat.say("Problema: " + problem)
-        $zopim.livechat.say("Product id: " + productID)
-
-        $zopim.livechat.setOnChatEnd(function() {
-          finish();
-        });
-
-        $zopim.livechat.badge.show();
-        $zopim.livechat.window.show();
-
         $("#step-3").removeClass("show");
+        $("#loading").addClass("show");
+        $("#launcher").addClass("show");
+
+        loadChatInformations()
+
+        $("#loading").removeClass("show");
         $("#chatting").addClass("show");
+      }
+
+      function loadChatInformations() {
+        $zopim(function() {
+          $zopim.livechat.setName($("#currentUserName").val())
+          $zopim.livechat.setEmail($("#currentUserEmail").val())
+
+          $zopim.livechat.say("Preciso de ajuda...")
+          $zopim.livechat.say("Problema: " + problem)
+          $zopim.livechat.say("Product id: " + productID)
+
+          $zopim.livechat.setOnChatEnd(function() {
+            finish();
+          });
+
+          $zopim.livechat.window.openPopout()
+        })
       }
     </script>
 
     <style>
-        #step-1, #step-2, #step-3, #requestticket, #chatting, #congratz {
-          display: none;
-        }
+      iframe#launcher {
+        display: none;
+      }
 
-        .show {
-          display: block !important;
-        }
+      #step-1, #step-2, #step-3, #requestticket, #chatting, #congratz, #loading {
+        display: none;
+      }
+
+      .show {
+        display: block !important;
+      }
     </style>
   </head>
 
@@ -156,6 +167,10 @@
       <br>
 
       <button onclick="finish()"> Abrir solicitação </button>
+    </div>
+
+    <div id="loading">
+      carregand... guenta ai
     </div>
 
     <div id="chatting">
