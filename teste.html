@@ -9,6 +9,8 @@
     <script>
       $(document).ready(function() {
         init();
+
+        zE('webWidget', 'hide')
       });
 
       function init() {
@@ -66,27 +68,23 @@
 
       function loadChatInformations() {
         $zopim(function() {
-          $zopim.livechat.setName($("#currentUserName").val())
-          $zopim.livechat.setEmail($("#currentUserEmail").val())
+          zE('webWidget', 'show')
 
-          $zopim.livechat.say("Preciso de ajuda...")
-          $zopim.livechat.say("Problema: " + problem)
-          $zopim.livechat.say("Product id: " + productID)
+          zE('webWidget', 'prefill', { name: { value: $("#currentUserName").val(), readOnly: false }})
+          zE('webWidget', 'prefill', { email: { value: $("#currentUserEmail").val(), readOnly: true }})
 
-          $zopim.livechat.setOnChatEnd(function() {
-            finish();
-          });
+          text = "Preciso de ajuda... \n" + "Problema: " + $("#problem").val() + "\n" + "ProductID: " + $("#productID").val()
 
-          $zopim.livechat.window.openPopout()
+          zE('webWidget', 'chat:send', text)
+
+          zE('webWidget:on', 'chat:end', finish)
+
+          zE('webWidget', 'popout')
         })
       }
     </script>
 
     <style>
-      iframe#launcher {
-        display: none;
-      }
-
       #step-1, #step-2, #step-3, #requestticket, #chatting, #congratz, #loading {
         display: none;
       }
