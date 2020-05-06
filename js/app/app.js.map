@@ -1,1 +1,0 @@
-{"version":3,"sources":["../app-es6/app.js"],"names":["Posts","name","alert","console","log"],"mappings":";;;;IAAMA,K,GACF,eAAYC,IAAZ,EAAkB;AAAA;;AACdC,UAAMD,IAAN;AACAE,YAAQC,GAAR,CAAYH,IAAZ;AACH,C","file":"app.js","sourcesContent":["class Posts {\n    constructor(name) {\n        alert(name);\n        console.log(name);\n    }\n}\n"]}
