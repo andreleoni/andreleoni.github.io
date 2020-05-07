@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Working with hash params"
+date:   2020-05-07 19:30:41 -0300
+categories: jekyll update
+---
 ```
 test_hash = { a: 1 }
 
