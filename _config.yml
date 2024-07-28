@@ -1,17 +1,13 @@
-site: Sidey
-url: #yoururl
+site: andreleoni.me
+url: https://andreleoni.me
 title: Andre Leoni | Software Engineer
-description: My personal website.
-twitter:
-  username: #yourusername
-  card: summary
-  creator: #yourusername
+description: My personal blog and website.
+
 author:
-  twitter: #yourusername
-  name: #yourusername
-  avatar:
+  name: Andre Leoni
+  avatar: https://media.licdn.com/dms/image/D4D03AQHVa9_bqvMdsg/profile-displayphoto-shrink_400_400/0/1688431908024?e=1727913600&v=beta&t=Eiv3Q36mMbN6ggGnVLWcboSnCBDmmnKr6LkObwPg2R8
   email: andreluizleoni@gmail.com
-  url: #yoururl
+  url: https://andreleoni.me
 permalink: pretty
 
 baseurl: ""
