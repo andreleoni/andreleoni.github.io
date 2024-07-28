@@ -53,6 +53,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "speeches"
+    values:
+      layout: "speeches"
+  -
+    scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
