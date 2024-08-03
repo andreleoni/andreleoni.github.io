@@ -62,3 +62,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+  -
+    scope:
+      path: "https://books.andreleoni.me"
+      type: "posts"
