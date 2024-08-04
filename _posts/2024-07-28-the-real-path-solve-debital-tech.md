@@ -21,7 +21,7 @@ Technical debt is a metaphor introduced by Ward Cunningham, one of the pioneers 
 * Lack of unit and integration tests.
 * Insufficient or outdated documentation.
 
-Just like financial debt, technical debt accumulates interest over time. The longer a technical debt remains unresolved, the harder and more costly it becomes to pay it off. This occurs because the system's complexity increases, and understanding old code diminishes, making refactoring more challenging.
+Just like financial debt, technical debt accumulates interest over time. The longer a technical debt remains unresolved, the harder and more costly it becomes to pay it off. This occurs because the system's complexity increases, and understanding old code diminishes, making refactoring more challenging. For me, this is the greatest factor to consider when prioritizing what needs to be fixed first or deciding if it's better to develop new projects.
 
 # Causes of Technical Debt
 
