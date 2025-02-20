@@ -16,3 +16,5 @@ Some util links.
 [LinkedIn](https://www.linkedin.com/in/andreleoni/)
 
 [Medium](https://medium.com/@andreleoni)
+
+[Youtube](https://www.youtube.com/@andleoni)
